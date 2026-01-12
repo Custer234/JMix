@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Portfolio</title>
+
+  <!-- ===== CSS ===== -->
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --accent: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #020617, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1f2933;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--text);
+      opacity: 0.8;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      opacity: 1;
+    }
+
+    main {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 600px;
+      opacity: 0.85;
+    }
+
+    button {
+      background: var(--accent);
+      border: none;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      width: fit-content;
+    }
+
+    button:hover {
+      filter: brightness(1.1);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>My Portfolio</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Web‑Focused Creative Marketing</h1>
+      <p>I design and code visual-first websites that showcase animation, illustration, and photography while applying marketing principles like visual hierarchy, UX flow, and conversion-focused layout.</p>
+      <button onclick="scrollToWork()">View Case Study</button>
+    </section>
+
+    <section id="work" class="card-grid">
+      <div class="card">
+        <h3>🎞️ Animation</h3>
+        <p>Short films, motion tests, and animated sequences.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 Illustration</h3>
+        <p>Concept art, character design, and digital illustration.</p>
+      </div>
+      <div class="card">
+        <h3>📷 Photography</h3>
+        <p>Portraits, environmental shots, and experimental photography.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed & built as a marketing-focused portfolio website.</p>
+    <p>© 2026 Your Name</p>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    function scrollToWork() {
+      document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
